@@ -29,6 +29,7 @@ extern "C" {
 
 /*=====[Definitions of public data types]====================================*/
 
+//! Tipo de dato para almacenar los datos del alumno 
 typedef struct alumno_s {
     char apellidos[30];
     char nombres[30];
@@ -37,13 +38,23 @@ typedef struct alumno_s {
 
 /*=====[Definitions of public global variables]==============================*/
 
+extern const alumno_t ALUMNOS[];
+
+extern const int CANTIDAD_ALUMNOS;
+
 /*=====[Prototypes (declarations) of public functions]=======================*/
 
 bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno);
 
+
 bool AlejandroPermingeat(char * cadena, size_t espacio);
 
 bool EstebanVolentini(char * cadena, size_t espacio);
+
+bool FedericoPacher(char * cadena, size_t espacio);
+
+bool SerializarAlumnos(char * cadena, size_t espacio, const alumno_t alumnos[], int cantidad);
+
 
 /*=====[Prototypes (declarations) of public interrupt functions]=============*/
 
