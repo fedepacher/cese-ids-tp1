@@ -44,6 +44,21 @@ extern const int CANTIDAD_ALUMNOS;
 
 /*=====[Prototypes (declarations) of public functions]=======================*/
 
+/**
+    *   @brief  Funcion para mostrar en pantalla los datos personales del alumno  
+    *  
+    * 	@param[in]  cadena      Referencia a un objeto que contiene los datos personales del alumno
+    *	
+    *   @param[in]  espacio     Referencia que  indica la cantidad de datos del alumno
+    *
+    *   
+    *   @param[in]  alumno      Referencia al alumno 
+    *
+    *   @return         True            El procedimiento se completo sin errores
+    *
+    *   @return         False           El  procedimiento detecto un error
+    *	
+*/
 bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno);
 
 
@@ -53,6 +68,21 @@ bool EstebanVolentini(char * cadena, size_t espacio);
 
 bool FedericoPacher(char * cadena, size_t espacio);
 
+/**
+    *   @brief  Funcion para mostrar en pantalla los datos personales del la lista de alumnos  
+    *  
+    *   @param[in]  cadena      Referencia a un objeto que contiene los datos personales del alumno
+    *
+    *   @param[in]  espacio     Referencia que  indica la cantidad de datos del alumno
+    *
+    *   @param[in]  alumnos[]   Referencia al listado de alumnos 
+    *
+    *   @param[in]  cantidad    Referencia que indica la cantidad de alumnos a mostrar en pantalla
+    *
+    *   @return         True            El procedimiento se completo sin errores
+    *
+    *   @return         False           El  procedimiento detecto un error
+*/
 bool SerializarAlumnos(char * cadena, size_t espacio, const alumno_t alumnos[], int cantidad);
 
 
