@@ -24,6 +24,12 @@
 /*=====[Definitions of external public global variables]=====================*/
 
 /*=====[Definitions of public global variables]==============================*/
+static const struct alumno_s DAVID_BROIN = {
+    .apellidos = "BROIN",
+    .nombres = "David Mauricio",
+    .documento = "32.370.264",
+};
+
 static const struct alumno_s LUCAS_MONZONLANGUASCO = {
     .apellidos = "MONZON LANGUASCO",
     .nombres = "Lucas Fabricio",
@@ -67,6 +73,7 @@ static const struct alumno_s LUCIANO_VITTORI = {
 };
 
 const alumno_t ALUMNOS[] = {
+    &DAVID_BROIN,
     &LUCIANO_VITTORI,
     &LUCAS_MONZONLANGUASCO,
     &KEVIN_MONCAYO,
