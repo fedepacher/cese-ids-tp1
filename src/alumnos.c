@@ -72,8 +72,15 @@ static const struct alumno_s LUCIANO_VITTORI = {
     .documento = "35.440.774",
 };
 
+static const struct alumno_s MUNOZ_JORGE = {
+      .apellidos = "MUÑOZ",
+      .nombres = "Jorge Salvador",
+      .documento = "33.027.191",
+  };
+
 const alumno_t ALUMNOS[] = {
     &DAVID_BROIN,
+    &MUNOZ_JORGE,
     &LUCIANO_VITTORI,
     &LUCAS_MONZONLANGUASCO,
     &KEVIN_MONCAYO,
