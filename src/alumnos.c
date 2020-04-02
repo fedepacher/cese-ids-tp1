@@ -25,21 +25,16 @@
 
 /*=====[Definitions of public global variables]==============================*/
 
-
-//! Tipo de dato que almacena los datos del alumno
-
 static const struct alumno_s FEDERICO_PACHER = {
-    .apellidos = "PACHER",  //!<    Apellido del alumno
-    .nombres = "Federico",  //!<    Nombre del alumno
-    .documento = "28.215.978",  //!<    Documento del alumno
+    .apellidos = "PACHER",
+    .nombres = "Federico",
+    .documento = "28.215.978",
 };
 
-//! Tipo de dato que contine a los alumnos
 const alumno_t ALUMNOS[] = {
-    &FEDERICO_PACHER,   //!< Nombre del alumno en la lista
+    &FEDERICO_PACHER,
 };
 
-//!tipo de dato que almacena la cantidad de alumnos
 const int CANTIDAD_ALUMNOS = (sizeof(ALUMNOS) / sizeof(alumno_t));
 
 /*=====[Definitions of private global variables]=============================*/
@@ -50,14 +45,6 @@ const int CANTIDAD_ALUMNOS = (sizeof(ALUMNOS) / sizeof(alumno_t));
 
 /*=====[Implementations of interrupt functions]==============================*/
 
-/**
-    *   @brief  Funcion para mostrar en pantalla los datos personales del alumno  
-    *   @param[in]  cadena      Referencia a un objeto que contiene los datos personales del alumno
-    *   @param[in]  espacio     Referencia que  indica la cantidad de datos del alumno
-    *   @param[in]  alumno      Referencia al alumno 
-    *   @return         True            El procedimiento se completo sin errores
-    *   @return         False           El  procedimiento detecto un error
-*/
 bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno) {
     int resultado;
     const char FORMATO[] = "{"
@@ -71,16 +58,7 @@ bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno) {
 
     return (resultado >= 0);
 }
- 
- /**
-    *   @brief  Funcion para mostrar en pantalla los datos personales del la lista de alumnos  
-    *   @param[in]  cadena      Referencia a un objeto que contiene los datos personales del alumno
-    *   @param[in]  espacio     Referencia que  indica la cantidad de datos del alumno
-    *   @param[in]  alumnos[]   Referencia al listado de alumnos 
-    *   @param[in]  cantidad    Referencia que indica la cantidad de alumnos a mostrar en pantalla
-    *   @return         True            El procedimiento se completo sin errores
-    *   @return         False           El  procedimiento detecto un error
-*/
+
 bool SerializarAlumnos(char * cadena, size_t espacio, const alumno_t alumnos[], int cantidad) {
     int posicion = snprintf(cadena, espacio, "[\r\n  ");
     bool resultado = (posicion > 0);
