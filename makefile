@@ -3,7 +3,6 @@ INC_DIR = ./inc
 OBJ_DIR = ./build/obj
 BIN_DIR = ./build
 
-
 SRC_FILES = $(wildcard $(SRC_DIR)/*.c)
 OBJ_FILES = $(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRC_FILES))
 
